@@ -3,16 +3,22 @@ package LogicProgram;
 import java.util.Scanner;
 
 public class PrimeNumber {
-        public static void primeNum(int number)
+        public static void main(String[] args)
         {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter value of number :");
+            int number  = sc.nextInt();
+            primeNum(number);
+        }
+        public static void primeNum(int number) {
             int temp=0;
-            if (number==0 ||number== 1)
+            if (number==0 || number== 1)
             {
                 System.out.println(number+" is not prime number");
             }
             else
             {
-                for(int i=2;i<number/2;i++)
+                for(int i=2; i < number/2; i++)
                 {
                     if (number%i==0) {
                         System.out.println(number + " is not prime number");
@@ -28,12 +34,5 @@ public class PrimeNumber {
             }
         }
 
-        public static void main(String[] args)
-        {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Enter value of number :");
-            int number  = sc.nextInt();
-            primeNum(number);
-        }
     }
 
